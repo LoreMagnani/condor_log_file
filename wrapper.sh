@@ -8,4 +8,5 @@ echo this is the $2-th job
 ./runcmsgrid.sh 1000 $2 4
 date
 mv *lhe .. && echo 'Generate events successfully!'
+cd ..
 rm -rf tmp
