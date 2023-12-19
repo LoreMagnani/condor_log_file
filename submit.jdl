@@ -1,0 +1,13 @@
+Universe = vanilla
+requirements = (OpSysAndVer =?= "CentOS7")
++JobFlavour = "workday"
+Executable = wrapper.sh
+arguments = $(proc) $(Step)
+should_transfer_files = YES
+transfer_input_files =  $(proc)_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz
+Error = EFT_LHE/gp_$(proc)_results/log/$(ClusterId)_$(ProcId).err
+Output = EFT_LHE/gp_$(proc)_results/log/$(ClusterId)_$(ProcId).out
+Log = EFT_LHE/gp_$(proc)_results/log/$(ClusterId)_$(ProcId).log
+transfer_output_remaps = "cmsgrid_final.lhe = EFT_LHE/gp_$(proc)_results/lhe/$(ClusterId)_$(ProcId).lhe"
+when_to_transfer_output = ON_EXIT
+Queue 5 proc in (VBF_Z2)
