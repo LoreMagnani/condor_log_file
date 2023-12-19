@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir tmp
 cd tmp
 cp ../$1_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz ./
